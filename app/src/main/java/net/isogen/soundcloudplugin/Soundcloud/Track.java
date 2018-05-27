@@ -50,7 +50,7 @@ public class Track implements SoundcloudObject{
     public String getAlbumArtURL(){
         String smallArt = (String)getAttribute("artwork_url");
         if(smallArt != null){
-            return smallArt.replace("large", "t300x300");
+            return smallArt.replace("large", "t500x500");
         }
         return null;
     }
@@ -59,6 +59,20 @@ public class Track implements SoundcloudObject{
         return String.format(api.ISO_DOWNLOAD_URL, (Integer)getAttribute("id"));
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s - %s", getArtist(), getTitle());
+    }
 
+    public int getId(){
+        return (int)getAttribute("id");
+    }
 
+    public String getJSON(){
+        return track.toString();
+    }
+
+    public String getSoundcloudURL(){
+        return (String)getAttribute("permalink_url");
+    }
 }

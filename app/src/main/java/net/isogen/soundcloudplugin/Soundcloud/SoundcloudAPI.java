@@ -32,7 +32,7 @@ public class SoundcloudAPI {
     }
 
     public SoundcloudObject resolve(String url){
-        if(url.contains("m.soundcloud")){
+        if(url != null && url.contains("m.soundcloud")){
             url = url.replace("m.soundcloud", "soundcloud");
         }
         try{

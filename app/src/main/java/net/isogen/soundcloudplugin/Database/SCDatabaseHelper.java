@@ -16,11 +16,13 @@ public class SCDatabaseHelper extends SQLiteOpenHelper {
         String sql = String.format(
                 "CREATE TABLE %s (" +
                 "%s INTEGER PRIMARY KEY," +
-                "%s TEXT" +
+                "%s TEXT," +
+                "%s DATETIME DEFAULT CURRENT_TIMESTAMP" +
                 ")",
                 TrackDatabase.TABLE_NAME,
                 TrackDatabase.COLUMN_ID,
-                TrackDatabase.COLUMN_DATA
+                TrackDatabase.COLUMN_DATA,
+                TrackDatabase.COLUMN_TIME
         );
         db.execSQL(sql);
     }

@@ -32,4 +32,8 @@ public class Utilities {
         }
         return img;
     }
+
+    public static void RunInThread(Runnable r){
+        new Thread(r).start();
+    }
 }
