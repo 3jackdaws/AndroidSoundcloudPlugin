@@ -24,6 +24,7 @@ public class RecentListFragment extends Fragment {
     ListView recentList;
     List<Track> recentTracks;
     Context context;
+    TrackDetailFragment detailFragment;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -36,12 +37,17 @@ public class RecentListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         recentList = (ListView)view.findViewById(R.id.recent_list);
 
+
         recentList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(detailFragment == null){
+                    detailFragment = (TrackDetailFragment) ((FragmentRecentActivity)getActivity()).getSupportFragmentManager().findFragmentById(R.id.detail_fragment);
+                }
+
                 Track selectedTrack = recentTracks.get(position);
 
-                TrackDetailFragment detailFragment = (TrackDetailFragment) ((FragmentRecentActivity)getActivity()).getSupportFragmentManager().findFragmentById(R.id.detail_fragment);
+
 
                 if(detailFragment != null && detailFragment.isVisible()){
                     detailFragment.setTrack(selectedTrack);

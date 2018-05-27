@@ -17,8 +17,11 @@ public class FragmentRecentActivity extends AppCompatActivity {
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Recent Tracks");
+        if(toolbar!= null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle("Recent Tracks");
+        }
+
 
     }
 }

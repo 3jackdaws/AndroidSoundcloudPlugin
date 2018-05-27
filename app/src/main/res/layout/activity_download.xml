@@ -10,7 +10,7 @@
         android:id="@+id/album_art"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         app:srcCompat="@android:color/black"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -49,9 +49,7 @@
         android:id="@+id/spinner"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="192dp"
+        android:layout_centerInParent="true"
         android:indeterminate="true"
         tools:visibility="invisible" />
 

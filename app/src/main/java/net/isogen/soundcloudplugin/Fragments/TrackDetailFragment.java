@@ -20,6 +20,8 @@ import net.isogen.soundcloudplugin.R;
 import net.isogen.soundcloudplugin.Soundcloud.Track;
 import net.isogen.soundcloudplugin.Utilities;
 
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -47,14 +49,12 @@ public class TrackDetailFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         artwork = (ImageView) view.findViewById(R.id.album_art);
         trackArtist = (TextView) view.findViewById(R.id.artist_text);
         trackTitle = (TextView) view.findViewById(R.id.title_text);
         viewOnSCButton = (TextView) view.findViewById(R.id.view_on_sc);
 
         database = new TrackDatabase(getActivity());
-
     }
 
     public void setTrack(Track selectedTrack){

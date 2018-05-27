@@ -62,7 +62,7 @@ public class DownloadTrackActivity extends AppCompatActivity {
         String action = intent.getAction();
         String type = intent.getType();
 
-        actionBar = getSupportActionBar();
+
 
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if ("text/plain".equals(type)) {
