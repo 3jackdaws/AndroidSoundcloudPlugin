@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
 
     <application
         android:allowBackup="true"
@@ -27,16 +27,24 @@
             android:name=".Activities.RecentsActivity"
             android:label="@string/title_activity_recents"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Activities.TrackDetailActivity"
+            android:label="@string/title_activity_track_detail"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Activities.FragmentRecentActivity"
+            android:label="Soundcloud Plugin"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Activities.TrackDetailActivity"
-            android:label="@string/title_activity_track_detail"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
